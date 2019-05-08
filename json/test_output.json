@@ -1,0 +1,258 @@
+{
+    "linkedMenu" : "modelingMenuSet",
+    "autoSave" : true,
+    "selectedShelf" : "Polygons",
+    "panels" : [{
+            "arr" : [300000, 0.000060, 0, 3.141592, 2669.780000, 63, 0.000031, 15, 255, 2, 3, 1],
+            "mainWindowPanel" : true,
+            "splitter" : {
+                "orientation" : "vertical",
+                "children" : [{
+                        "tabWidget" : {
+                            "selectedIndex" : 0,
+                            "controlWidth" : 1276,
+                            "controlHeight" : 23,
+                            "collapsed" : false,
+                            "controls" : [{
+                                    "objectName" : "StatusLine",
+                                    "title" : "Status Line",
+                                    "uiScript" : "global string $gStatusLineForm; formLayout $gStatusLineForm;",
+                                    "retain" : true,
+                                    "loadImmediately" : true,
+                                    "checkPlugins" : false,
+                                    "tabDirection" : 0,
+                                    "closed" : false,
+                                    "widthProperty" : "free",
+                                    "heightProperty" : "fixed",
+                                    "controlWidth" : 1276,
+                                    "controlHeight" : 23
+                                }]
+                        }
+                    }, {
+                        "tabWidget" : {
+                            "selectedIndex" : 0,
+                            "controlWidth" : 1276,
+                            "controlHeight" : 66,
+                            "collapsed" : false,
+                            "controls" : [{
+                                    "objectName" : "Shelf",
+                                    "title" : "Shelf",
+                                    "uiScript" : "global string $gShelfForm; formLayout $gShelfForm;",
+                                    "retain" : true,
+                                    "loadImmediately" : true,
+                                    "checkPlugins" : false,
+                                    "tabDirection" : 0,
+                                    "closed" : false,
+                                    "widthProperty" : "free",
+                                    "heightProperty" : "fixed",
+                                    "controlWidth" : 1276,
+                                    "controlHeight" : 64,
+                                    "initCallback" : "shelfInitCallback"
+                                }]
+                        }
+                    }, {
+                        "splitter" : {
+                            "orientation" : "horizontal",
+                            "children" : [{
+                                    "tabWidget" : {
+                                        "selectedIndex" : 0,
+                                        "controlWidth" : 40,
+                                        "controlHeight" : 751,
+                                        "collapsed" : false,
+                                        "controls" : [{
+                                                "objectName" : "ToolBox",
+                                                "title" : "Tool Box",
+                                                "uiScript" : "global string $gToolboxForm; formLayout $gToolboxForm;",
+                                                "retain" : true,
+                                                "loadImmediately" : true,
+                                                "checkPlugins" : false,
+                                                "tabDirection" : 0,
+                                                "closed" : false,
+                                                "widthProperty" : "fixed",
+                                                "heightProperty" : "free",
+                                                "controlWidth" : 40,
+                                                "controlHeight" : 751
+                                            }]
+                                    }
+                                }, {
+                                    "tabWidget" : {
+                                        "selectedIndex" : 0,
+                                        "controlWidth" : 260,
+                                        "controlHeight" : 736,
+                                        "controls" : [{
+                                                "objectName" : "Outliner",
+                                                "title" : "Outliner",
+                                                "uiScript" : "outlinerPanel -menuBarVisible true -label panelLabel Outliner",
+                                                "retain" : true,
+                                                "loadImmediately" : true,
+                                                "checkPlugins" : false,
+                                                "tabDirection" : 0,
+                                                "closed" : true,
+                                                "widthProperty" : "preferred",
+                                                "heightProperty" : "free",
+                                                "controlWidth" : 260,
+                                                "controlHeight" : 736,
+                                                "initCallback" : "outlinerStateCallback"
+                                            }]
+                                    }
+                                }, {
+                                    "tabWidget" : {
+                                        "selectedIndex" : 0,
+                                        "controlWidth" : 945,
+                                        "controlHeight" : 751,
+                                        "collapsed" : false,
+                                        "controls" : [{
+                                                "objectName" : "MainPane",
+                                                "title" : "viewPanes",
+                                                "uiScript" : "global string $gMainPane; paneLayout -nbg 0 $gMainPane;",
+                                                "retain" : true,
+                                                "loadImmediately" : true,
+                                                "checkPlugins" : false,
+                                                "tabDirection" : 0,
+                                                "closed" : false,
+                                                "widthProperty" : "free",
+                                                "heightProperty" : "free",
+                                                "controlWidth" : 945,
+                                                "controlHeight" : 751,
+                                                "initCallback" : "mainPaneStateCallback",
+                                                "stateString" : "global string $gMainPane; paneLayout -edit -configuration single $gMainPane;if(`modelPanel -exists modelPanel4`){ modelPanel -edit -parent $gMainPane modelPanel4; paneLayout -edit -setPane modelPanel4 1 $gMainPane;}"
+                                            }]
+                                    }
+                                }, {
+                                    "tabWidget" : {
+                                        "selectedIndex" : 0,
+                                        "controlWidth" : 260,
+                                        "controlHeight" : 751,
+                                        "collapsed" : false,
+                                        "controls" : [{
+                                                "objectName" : "ChannelBoxLayerEditor",
+                                                "title" : "Channel Box / Layer Editor",
+                                                "uiScript" : "global string $gChannelsLayersForm; formLayout $gChannelsLayersForm;",
+                                                "retain" : true,
+                                                "loadImmediately" : true,
+                                                "checkPlugins" : false,
+                                                "tabDirection" : 3,
+                                                "closed" : false,
+                                                "widthProperty" : "preferred",
+                                                "heightProperty" : "free",
+                                                "controlWidth" : 260,
+                                                "controlHeight" : 751
+                                            }, {
+                                                "objectName" : "NEXDockControl",
+                                                "title" : "Modeling Toolkit",
+                                                "uiScript" : "dR_createNEXDockControl();",
+                                                "retain" : true,
+                                                "loadImmediately" : true,
+                                                "checkPlugins" : false,
+                                                "tabDirection" : 3,
+                                                "closed" : false,
+                                                "widthProperty" : "preferred",
+                                                "heightProperty" : "free",
+                                                "controlWidth" : 260,
+                                                "controlHeight" : 918,
+                                                "requiredPlugins" : ["modelingToolkit"]
+                                            }, {
+                                                "objectName" : "AttributeEditor",
+                                                "title" : "Attribute Editor",
+                                                "uiScript" : "global string $gAttributeEditorForm; formLayout $gAttributeEditorForm;",
+                                                "retain" : true,
+                                                "loadImmediately" : true,
+                                                "checkPlugins" : false,
+                                                "tabDirection" : 3,
+                                                "closed" : false,
+                                                "widthProperty" : "preferred",
+                                                "heightProperty" : "free",
+                                                "controlWidth" : 460,
+                                                "controlHeight" : 918
+                                            }]
+                                    }
+                                }]
+                        }
+                    }, {
+                        "tabWidget" : {
+                            "selectedIndex" : 0,
+                            "controlWidth" : 1276,
+                            "controlHeight" : 36,
+                            "collapsed" : false,
+                            "controls" : [{
+                                    "objectName" : "TimeSlider",
+                                    "title" : "Time Slider",
+                                    "uiScript" : "global string $gTimeSliderForm; formLayout $gTimeSliderForm;",
+                                    "retain" : true,
+                                    "loadImmediately" : true,
+                                    "checkPlugins" : false,
+                                    "tabDirection" : 0,
+                                    "closed" : false,
+                                    "widthProperty" : "free",
+                                    "heightProperty" : "fixed",
+                                    "controlWidth" : 1276,
+                                    "controlHeight" : 32
+                                }]
+                        }
+                    }, {
+                        "tabWidget" : {
+                            "selectedIndex" : 0,
+                            "controlWidth" : 1276,
+                            "controlHeight" : 33,
+                            "collapsed" : false,
+                            "controls" : [{
+                                    "objectName" : "RangeSlider",
+                                    "title" : "Range Slider",
+                                    "uiScript" : "global string $gPlaybackRangeForm; formLayout $gPlaybackRangeForm;",
+                                    "retain" : true,
+                                    "loadImmediately" : true,
+                                    "checkPlugins" : false,
+                                    "tabDirection" : 0,
+                                    "closed" : false,
+                                    "widthProperty" : "free",
+                                    "heightProperty" : "fixed",
+                                    "controlWidth" : 1276,
+                                    "controlHeight" : 29
+                                }]
+                        }
+                    }, {
+                        "tabWidget" : {
+                            "selectedIndex" : 0,
+                            "controlWidth" : 1276,
+                            "controlHeight" : 28,
+                            "collapsed" : false,
+                            "controls" : [{
+                                    "objectName" : "CommandLine",
+                                    "title" : "Command Line",
+                                    "uiScript" : "global string $gCommandLineForm; formLayout $gCommandLineForm;",
+                                    "retain" : true,
+                                    "loadImmediately" : true,
+                                    "checkPlugins" : false,
+                                    "tabDirection" : 0,
+                                    "closed" : false,
+                                    "widthProperty" : "free",
+                                    "heightProperty" : "fixed",
+                                    "controlWidth" : 1276,
+                                    "controlHeight" : 28
+                                }]
+                        }
+                    }, {
+                        "tabWidget" : {
+                            "selectedIndex" : 0,
+                            "controlWidth" : 1276,
+                            "controlHeight" : 20,
+                            "collapsed" : false,
+                            "controls" : [{
+                                    "objectName" : "HelpLine",
+                                    "title" : "Help Line",
+                                    "uiScript" : "global string $gHelpLineForm; formLayout $gHelpLineForm;",
+                                    "retain" : true,
+                                    "loadImmediately" : true,
+                                    "checkPlugins" : false,
+                                    "tabDirection" : 0,
+                                    "closed" : false,
+                                    "widthProperty" : "free",
+                                    "heightProperty" : "fixed",
+                                    "controlWidth" : 1276,
+                                    "controlHeight" : 20
+                                }]
+                        }
+                    }]
+            }
+        }]
+}

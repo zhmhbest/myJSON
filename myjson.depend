@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1557290042 source:c:\users\zhmhb\codeblocksprojects\myjson\main.c
+	<stdio.h>
+	<stdlib.h>
+	"myJSON.h"
+
+1556811535 c:\users\zhmhb\codeblocksprojects\myjson\myjson\myjson.h
+	<stdint.h>
+
+1557290371 source:c:\users\zhmhb\codeblocksprojects\myjson\myjson\myjson.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	"myJSON.h"
+	"JSON_Bytes.inl.h"
+	"JSON_Print.inl.h"
+	"JSON_Item.inl.h"
+	"JSON_Create.inl.h"
+	"JSON_Parse.inl.h"
+	"JSON_Methods.inl.h"
+
+1557226780 c:\users\zhmhb\codeblocksprojects\myjson\myjson\json_bytes.inl.h
+
+1557226615 c:\users\zhmhb\codeblocksprojects\myjson\myjson\json_print.inl.h
+
+1556810569 c:\users\zhmhb\codeblocksprojects\myjson\myjson\json_item.inl.h
+
+1556812325 c:\users\zhmhb\codeblocksprojects\myjson\myjson\json_create.inl.h
+
+1557290710 c:\users\zhmhb\codeblocksprojects\myjson\myjson\json_parse.inl.h
+	"JSON_Parse_Num.inl.h"
+	"JSON_Parse_Str.inl.h"
+	"JSON_Parse_Arr.inl.h"
+	"JSON_Parse_Obj.inl.h"
+
+1557285930 c:\users\zhmhb\codeblocksprojects\myjson\myjson\json_parse_num.inl.h
+
+1557226321 c:\users\zhmhb\codeblocksprojects\myjson\myjson\json_parse_str.inl.h
+
+1557290616 c:\users\zhmhb\codeblocksprojects\myjson\myjson\json_parse_arr.inl.h
+
+1557290604 c:\users\zhmhb\codeblocksprojects\myjson\myjson\json_parse_obj.inl.h
+
+1556810772 c:\users\zhmhb\codeblocksprojects\myjson\myjson\json_methods.inl.h
+
